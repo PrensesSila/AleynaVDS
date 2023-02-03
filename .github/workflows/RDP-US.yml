@@ -11,8 +11,8 @@ jobs:
     steps:
     - name: Ngrok & NSSM İndiriliyor
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/PrensesSila/AleynaVDS/main/Files/ngrok.exe -OutFile ngrok.exe
-        Invoke-WebRequest https://raw.githubusercontent.com/PrensesSila/AleynaVDS/main/Files/nssm.exe -OutFile nssm.exe
+        Invoke-WebRequest https://raw.githubusercontent.com/PrensesSila/AleynaVDS/main/ngrok.exe -OutFile ngrok.exe
+        Invoke-WebRequest https://raw.githubusercontent.com/PrensesSila/AleynaVDS/main/nssm.exe -OutFile nssm.exe
     - name: NSSM ve Ngrok Windows Dizinine Kopyalanıyor
       run: | 
 	  copy nssm.exe C:\Windows\System32
@@ -23,9 +23,9 @@ jobs:
         NGROK_AUTH_TOKEN: 2LB1PMoet0EyXDfwJCUq0UVDhBa_67rrhxJ1Vwfdc9gg3pC11
     - name: Önemli Dosyalar İndiriliyor
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/PrensesSila/AleynaVDS/main/Files/NGROK-US.bat -OutFile NGROK-US.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/PrensesSila/AleynaVDS/main/Files/NGROK-CHECK.bat -OutFile NGROK-CHECK.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/PrensesSila/AleynaVDS/main/Files/loop.bat -OutFile loop.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/PrensesSila/AleynaVDS/main/NGROK-US.bat -OutFile NGROK-US.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/PrensesSila/AleynaVDS/main/NGROK-CHECK.bat -OutFile NGROK-CHECK.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/PrensesSila/AleynaVDS/main/loop.bat -OutFile loop.bat
     - name:  Ngrok İçin YML Dosyası Oluşturuluyor
       run: start NGROK-US.bat
     - name: RDP Erişimi Aktif Ediliyor
