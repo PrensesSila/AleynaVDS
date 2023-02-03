@@ -15,7 +15,7 @@ jobs:
         Invoke-WebRequest https://raw.githubusercontent.com/PrensesSila/AleynaVDS/main/Files/nssm.exe -OutFile nssm.exe
     - name: NSSM ve Ngrok Windows Dizinine Kopyalanıyor
       run: | 
-        copy nssm.exe C:\Windows\System32
+	  copy nssm.exe C:\Windows\System32
         copy ngrok.exe C:\Windows\System32
     - name: Ngrok Hesabınıza Bağlanılıyor
       run: .\ngrok.exe config add-authtoken 2LB1PMoet0EyXDfwJCUq0UVDhBa_67rrhxJ1Vwfdc9gg3pC11
